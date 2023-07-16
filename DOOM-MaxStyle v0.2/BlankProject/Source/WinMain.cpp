@@ -4,7 +4,7 @@
 	WCHAR		WindowTitle[MAX_NAME_STRING];
 	INT			WindowWidth;
 	INT			WindowHeight;
-
+	HICON		hIcon;
 //CALLBACK = allow to change logic of function
 LRESULT CALLBACK WindowProcess(HWND hWnd, UINT message, WPARAM wparam, LPARAM lparam)
 {
@@ -26,6 +26,8 @@ int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 
 	WindowWidth = 1366;
 	WindowHeight = 768;
+
+	hIcon = LoadIcon(HInstance(), MAKEINTRESOURCE(IDI_MAINICON));
 	
 	/* - Create Window Class - */
 
